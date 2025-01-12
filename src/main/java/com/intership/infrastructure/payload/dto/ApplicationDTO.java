@@ -6,9 +6,9 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class SiteDTO {
-
+public class ApplicationDTO {
     private Integer id;
-    private String designation;
-
+    private String name;
+    private String description;
+    private Integer categoryAppId;
 }

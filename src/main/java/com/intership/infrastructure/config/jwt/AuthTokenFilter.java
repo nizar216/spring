@@ -55,8 +55,18 @@ public class AuthTokenFilter extends OncePerRequestFilter {
     private String parseJwt(HttpServletRequest request) {
         String headerAuth = request.getHeader("Authorization");
 
+        if (headerAuth == null) {
+            logger.error("Authorization header is missing.");
+        } else {
+            logger.info("Authorization header received: {}", headerAuth);
+        }
+
         if (StringUtils.hasText(headerAuth) && headerAuth.startsWith("Bearer ")) {
-            return headerAuth.substring(7);
+            String token = headerAuth.substring(7);
+            logger.info("Extracted JWT token: {}", token);
+            return token;
+        } else {
+            logger.error("Invalid Authorization header format.");
         }
 
         return null;

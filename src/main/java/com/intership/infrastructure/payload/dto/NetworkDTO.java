@@ -6,9 +6,10 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class SiteDTO {
-
+public class NetworkDTO {
     private Integer id;
-    private String designation;
-
+    private String name;
+    private String ipRange;
+    private String networkType;
+    private Integer siteId;
 }

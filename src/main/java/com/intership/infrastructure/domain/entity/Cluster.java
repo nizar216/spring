@@ -1,8 +1,8 @@
 package com.intership.infrastructure.domain.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
+
 import java.io.Serializable;
 import java.util.Collection;
 
@@ -15,31 +15,24 @@ public class Cluster implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer clusterId;
+    private Integer id;
 
     @Column(nullable = false)
-    private String name;
+    private String designation;
 
-    @Column(nullable = false)
     private String description;
 
-    @Column(nullable = false)
     private String type;
 
-    @Column(nullable = false)
     private String role;
 
-    @Column(nullable = false)
     private String status;
 
-    @Column(nullable = false)
     private String location;
 
-    @OneToMany(mappedBy = "cluster", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
-    @JsonIgnore
+    @OneToMany(mappedBy = "cluster", cascade = {CascadeType.PERSIST, CascadeType.MERGE}, orphanRemoval = true)
     private Collection<Server> servers;
 
-    @OneToMany(mappedBy = "cluster", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
-    @JsonIgnore
+    @OneToMany(mappedBy = "cluster", cascade = {CascadeType.PERSIST, CascadeType.MERGE}, orphanRemoval = true)
     private Collection<ClusterApplication> clusterApplications;
 }

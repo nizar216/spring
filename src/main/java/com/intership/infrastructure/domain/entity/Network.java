@@ -29,7 +29,7 @@ public class Network implements Serializable {
     @OneToMany(mappedBy = "network", cascade = {CascadeType.PERSIST, CascadeType.MERGE}, orphanRemoval = true)
     private Collection<Subnet> subnets;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "site_id", nullable = false)
     private Site site;
 }

@@ -11,5 +11,5 @@ public class NetworkDTO {
     private String name;
     private String ipRange;
     private String networkType;
-    private Integer siteId;
+    private SiteDTO site;
 }

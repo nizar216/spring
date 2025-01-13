@@ -5,6 +5,7 @@ import com.intership.infrastructure.domain.entity.Site;
 import com.intership.infrastructure.domain.repository.NetworkRepository;
 import com.intership.infrastructure.domain.repository.SiteRepository;
 import com.intership.infrastructure.payload.dto.NetworkDTO;
+import com.intership.infrastructure.payload.dto.SiteDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -20,7 +21,7 @@ public class NetworkServiceImpl implements NetworkService {
 
     @Override
     public NetworkDTO createNetwork(NetworkDTO networkDTO) {
-        Site site = siteRepository.findById(networkDTO.getSiteId())
+        Site site = siteRepository.findById(networkDTO.getSite().getId())
                 .orElseThrow(() -> new RuntimeException("Site not found"));
 
         Network network = Network.builder()
@@ -72,6 +73,14 @@ public class NetworkServiceImpl implements NetworkService {
                 .name(network.getName())
                 .ipRange(network.getIpRange())
                 .networkType(network.getNetworkType())
+                .site(network.getSite() != null ? mapSiteToDTO(network.getSite()) : null)
+                .build();
+    }
+
+    private SiteDTO mapSiteToDTO(Site site) {
+        return SiteDTO.builder()
+                .id(site.getId())
+                .designation(site.getDesignation())
                 .build();
     }
 }

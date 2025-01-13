@@ -10,5 +10,5 @@ public class ApplicationDTO {
     private Integer id;
     private String name;
     private String description;
-    private Integer categoryAppId;
+    private CategoryAppDTO categoryApp;
 }

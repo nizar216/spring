@@ -1,4 +1,4 @@
-package com.intership.infrastructure.services;
+package com.intership.infrastructure.services.impl;
 
 import com.intership.infrastructure.domain.entity.User;
 import com.intership.infrastructure.domain.repository.UserRepository;

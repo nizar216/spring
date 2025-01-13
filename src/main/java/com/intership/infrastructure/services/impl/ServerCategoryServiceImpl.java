@@ -1,8 +1,9 @@
-package com.intership.infrastructure.services;
+package com.intership.infrastructure.services.impl;
 
 import com.intership.infrastructure.domain.entity.ServerCategory;
 import com.intership.infrastructure.domain.repository.ServerCategoryRepository;
 import com.intership.infrastructure.payload.dto.ServerCategoryDTO;
+import com.intership.infrastructure.services.ServerCategoryService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

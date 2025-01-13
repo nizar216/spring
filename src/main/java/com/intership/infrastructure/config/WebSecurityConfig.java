@@ -2,7 +2,7 @@ package com.intership.infrastructure.config;
 
 import com.intership.infrastructure.config.jwt.AuthEntryPointJwt;
 import com.intership.infrastructure.config.jwt.AuthTokenFilter;
-import com.intership.infrastructure.services.UserDetailsServiceImpl;
+import com.intership.infrastructure.services.impl.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

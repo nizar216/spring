@@ -1,8 +1,9 @@
-package com.intership.infrastructure.services;
+package com.intership.infrastructure.services.impl;
 
 import com.intership.infrastructure.domain.entity.Cluster;
 import com.intership.infrastructure.domain.repository.ClusterRepository;
 import com.intership.infrastructure.payload.dto.ClusterDTO;
+import com.intership.infrastructure.services.ClusterService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

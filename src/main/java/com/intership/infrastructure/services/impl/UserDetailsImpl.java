@@ -1,4 +1,4 @@
-package com.intership.infrastructure.services;
+package com.intership.infrastructure.services.impl;
 
 import java.util.Collection;
 import java.util.Objects;

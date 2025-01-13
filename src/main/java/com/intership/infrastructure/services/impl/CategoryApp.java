@@ -1,5 +1,6 @@
-package com.intership.infrastructure.domain.entity;
+package com.intership.infrastructure.services.impl;
 
+import com.intership.infrastructure.domain.entity.Application;
 import jakarta.persistence.*;
 import lombok.*;
 

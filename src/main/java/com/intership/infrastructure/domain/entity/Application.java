@@ -1,5 +1,6 @@
 package com.intership.infrastructure.domain.entity;
 
+import com.intership.infrastructure.services.impl.CategoryApp;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -22,7 +23,7 @@ public class Application implements Serializable {
 
     private String description;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "category_app_id", nullable = false)
     private CategoryApp categoryApp;
 

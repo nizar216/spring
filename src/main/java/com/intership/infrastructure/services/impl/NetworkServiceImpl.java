@@ -1,4 +1,4 @@
-package com.intership.infrastructure.services;
+package com.intership.infrastructure.services.impl;
 
 import com.intership.infrastructure.domain.entity.Network;
 import com.intership.infrastructure.domain.entity.Site;
@@ -6,6 +6,7 @@ import com.intership.infrastructure.domain.repository.NetworkRepository;
 import com.intership.infrastructure.domain.repository.SiteRepository;
 import com.intership.infrastructure.payload.dto.NetworkDTO;
 import com.intership.infrastructure.payload.dto.SiteDTO;
+import com.intership.infrastructure.services.NetworkService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

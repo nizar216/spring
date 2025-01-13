@@ -3,7 +3,7 @@ package com.intership.infrastructure.config.jwt;
 import java.security.Key;
 import java.util.Date;
 
-import com.intership.infrastructure.services.UserDetailsImpl;
+import com.intership.infrastructure.services.impl.UserDetailsImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;

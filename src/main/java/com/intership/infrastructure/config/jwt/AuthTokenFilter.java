@@ -2,7 +2,7 @@ package com.intership.infrastructure.config.jwt;
 
 import java.io.IOException;
 
-import com.intership.infrastructure.services.UserDetailsServiceImpl;
+import com.intership.infrastructure.services.impl.UserDetailsServiceImpl;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

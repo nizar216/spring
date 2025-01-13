@@ -7,7 +7,7 @@ import com.intership.infrastructure.payload.request.LoginRequest;
 import com.intership.infrastructure.payload.request.SignupRequest;
 import com.intership.infrastructure.payload.response.JwtResponse;
 import com.intership.infrastructure.payload.response.MessageResponse;
-import com.intership.infrastructure.services.UserDetailsImpl;
+import com.intership.infrastructure.services.impl.UserDetailsImpl;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
